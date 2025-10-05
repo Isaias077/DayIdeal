@@ -1,0 +1,41 @@
+{
+  "name": "express-backend",
+  "version": "1.0.0",
+  "description": "Backend básico en Express.js",
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch . --ext ts,js,json --exec ts-node server.ts",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "backend",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^20.11.30",
+    "@types/cors": "^2.8.17",
+    "@types/helmet": "^4.0.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0",
+    "rimraf": "^5.0.5"
+  }
+}
